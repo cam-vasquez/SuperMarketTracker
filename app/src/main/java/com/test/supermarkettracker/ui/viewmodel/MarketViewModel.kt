@@ -52,7 +52,7 @@ class MarketViewModel(private val repository: Repository): ViewModel() {
         status.value = INACTIVE
     }
 
-    fun selectedMarket(market: MarketModel){
+    fun setSelectedMarket(market: MarketModel){
         name.value = market.name
         location.value = market.location
     }

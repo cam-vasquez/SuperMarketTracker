@@ -29,6 +29,16 @@ class HomeFragment : Fragment() {
         MarketViewModel.Factory
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -40,13 +50,6 @@ class HomeFragment : Fragment() {
 
         appListeners()
         marketRecyclerView(view)
-    }
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
     }
 
     private fun marketRecyclerView(view: View){
@@ -65,7 +68,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun showSelectedMarket(selectedMarket: MarketModel){
-        marketViewModel.selectedMarket(selectedMarket)
+        marketViewModel.setSelectedMarket(selectedMarket)
 
         findNavController().navigate(R.id.action_homeFragment_to_marketDetailFragment)
     }

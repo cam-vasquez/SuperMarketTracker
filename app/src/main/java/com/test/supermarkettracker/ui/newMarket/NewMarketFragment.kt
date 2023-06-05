@@ -24,19 +24,24 @@ class NewMarketFragment : Fragment() {
         MarketViewModel.Factory
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        setMarketViewModel()
-        setMarketStatus()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentNewMarketBinding.inflate(inflater, container, false)
         return binding.root
-       }
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setMarketViewModel()
+        setMarketStatus()
+    }
+
 
     private fun setMarketStatus(){
         marketViewModel.status.observe(viewLifecycleOwner){
@@ -49,6 +54,7 @@ class NewMarketFragment : Fragment() {
                 status.equals(MarketViewModel.MARKET_ADDED) ->{
                     val toast = Toast.makeText(requireContext(), MarketViewModel.MARKET_ADDED, Toast.LENGTH_SHORT)
                     toast.show()
+
                     marketViewModel.clearStatus()
                     findNavController().popBackStack()
                 }

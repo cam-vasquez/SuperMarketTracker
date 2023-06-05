@@ -19,9 +19,7 @@ import com.test.supermarkettracker.ui.viewmodel.MarketViewModel
  */
 class ItemMarketFragment : Fragment() {
     private lateinit var binding: FragmentItemMarketBinding
-    private val marketViewModel: MarketViewModel by activityViewModels {
-        MarketViewModel.Factory
-    }
+
      override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,13 +28,5 @@ class ItemMarketFragment : Fragment() {
          return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setMarketViewModel()
-    }
-
-    private fun setMarketViewModel(){
-        binding.viewmodel = marketViewModel
-    }
 
 }

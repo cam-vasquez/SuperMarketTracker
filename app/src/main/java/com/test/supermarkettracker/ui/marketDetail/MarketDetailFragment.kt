@@ -22,11 +22,23 @@ class MarketDetailFragment : Fragment() {
         MarketViewModel.Factory
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMarketDetailBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setMarketViewModel()
+    }
+
+    private fun setMarketViewModel(){
+        binding.viewmodel = marketViewModel
     }
 }

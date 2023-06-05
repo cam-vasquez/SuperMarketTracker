@@ -7,7 +7,7 @@ import com.test.supermarkettracker.databinding.FragmentItemMarketBinding
 class MarketRecyclerViewHolder(private val binding: FragmentItemMarketBinding): RecyclerView.ViewHolder(binding.root) {
 
     fun bind(
-        market: MarketModel, clickListener: (MarketModel) -> Unit
+        market: MarketModel, clickListener: (MarketModel)->Unit
     ){
         binding.textViewName.text = market.name
         binding.textViewLocation.text = market.location
