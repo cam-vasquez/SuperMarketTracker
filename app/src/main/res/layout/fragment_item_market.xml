@@ -10,24 +10,28 @@
         <LinearLayout
             android:id="@+id/item_container_pic"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="40dp"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:src="@drawable/supermarket_logo">
 
             </ImageView>
+
         <LinearLayout
             android:id="@+id/item_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/text_view_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="name" />
+                tools:text="name"
+                android:textSize="40sp"/>
 
             <TextView
                 android:id="@+id/text_view_location"
@@ -35,6 +39,7 @@
                 android:layout_height="wrap_content"
                 tools:text="location" />
         </LinearLayout>
+
         </LinearLayout>
 
     </FrameLayout>
