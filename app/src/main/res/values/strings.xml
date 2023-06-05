@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">SuperMarketTracker</string>
+    <string name="app_name">SuperMarket Tracker</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="location">Location</string>
+    <string name="add_new_super_market">Add new super market</string>
+    <string name="New">New Super Market\n</string>
+    <string name="add_new">Add New</string>
+    <string name="location_hint">location</string>
+    <string name="name_hint">name</string>
+    <string name="new_super_market_txt">New Super Market</string>
 </resources>

@@ -6,9 +6,25 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#E4E2E2"
         tools:context=".ui.home.HomeFragment">
 
+        <TextView
+            android:id="@+id/txt_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:background="@color/dominant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+        </TextView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floating_action_button_add"
@@ -17,20 +33,23 @@
             android:layout_gravity="bottom|right"
             android:layout_margin="16dp"
             android:contentDescription="Navigate to new market"
+            app:backgroundTint="@color/dominant"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:srcCompat="@drawable/round_add_24" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_market"
-            android:layout_width="409dp"
-            android:layout_height="657dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="@dimen/small_gap"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txt_app"
             app:layout_constraintTop_toTopOf="parent"
             tools:itemCount="6"
-            tools:listitem="@layout/fragment_item_market"
-            />
+            tools:listitem="@layout/fragment_item_market" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
