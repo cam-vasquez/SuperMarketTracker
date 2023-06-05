@@ -42,13 +42,9 @@
                     android:textColor="@color/dominant"
                     android:textSize="@dimen/large_text_size"
                     tools:textStyle="bold">
+                </TextView>
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/name"
-                android:textSize="24sp"></TextView>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -61,11 +57,6 @@
                     android:hint="@string/name_hint"
                     android:text="@={viewmodel.name}" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/location"
-                    android:textSize="24sp"></TextView>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -97,4 +88,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
