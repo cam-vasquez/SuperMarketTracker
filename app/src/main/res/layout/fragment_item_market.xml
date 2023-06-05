@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.test.supermarkettracker.ui.viewmodel.MarketViewModel" />
+    </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,13 +23,15 @@
                 android:id="@+id/text_view_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="name" />
+                tools:text="name"
+                android:text="@{viewmodel.name}"/>
 
             <TextView
                 android:id="@+id/text_view_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="location" />
+                tools:text="location"
+                android:text="@{viewmodel.location}"/>
         </LinearLayout>
 
     </FrameLayout>
