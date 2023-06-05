@@ -7,7 +7,7 @@ import com.test.supermarkettracker.data.model.MarketModel
 import com.test.supermarkettracker.databinding.FragmentItemMarketBinding
 
 class MarketRecyclerViewAdapter(
-    private val clickListener: (MarketModel) -> Unit
+    private val clickListener: (MarketModel)->Unit
 ): RecyclerView.Adapter<MarketRecyclerViewHolder>() {
 
     private val markets = ArrayList<MarketModel>()
